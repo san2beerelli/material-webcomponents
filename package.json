@@ -1,0 +1,43 @@
+{
+  "name": "material-webcomponents",
+  "version": "1.0.0-beta.1",
+  "description": "Webcomponents that implements Google's Material Design. Developed material-webcomponents using Stenciljs.",
+  "main": "dist/material-webcomponents.js",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "browser": "dist/material-webcomponents.js",
+  "scripts": {
+    "build": "stencil build",
+    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "serve": "stencil-dev-server",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@stencil/core": "next"
+  },
+  "devDependencies": {
+    "@stencil/dev-server": "latest",
+    "@stencil/utils": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/san2beerelli/material-webcomponents.git"
+  },
+  "keywords": [
+    "Webcomponents",
+    "Material",
+    "Reactjs Components",
+    "Vue Components",
+    "Angular Components",
+    "Javascript Components"
+  ],
+  "author": "Santhosh Beerelli <san2beerelli@gmail.com> (http://san2beerelli.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/san2beerelli/material-webcomponents/issues"
+  },
+  "homepage": "https://github.com/san2beerelli/material-webcomponents#readme"
+}
