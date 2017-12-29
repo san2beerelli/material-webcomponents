@@ -5,11 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>material-webcomponents</title>
   <script src="/build/material-webcomponents.js"></script>
-
 </head>
 <body>
-
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-
+  <mwc-theme>
+    <mwc-button>Santhosh</mwc-button>
+    <mwc-button raised=true>Beerelli</mwc-button>
+    <mwc-typography display="inherit">
+      display1
+    </mwc-typography>
+    <mwc-typography type="title" color="#ff00ff" display="inherit">
+      Title
+    </mwc-typography>
+    <mwc-typography type="display4">
+      display1
+    </mwc-typography>
+    <mwc-card width="400px">
+    <mwc-card-header title="Title" subtitle="Sub Title">
+    </mwc-card-header>
+    <mwc-card-content>
+      <mwc-checkbox label="My CheckBox" alignlabel="right" >
+      </mwc-checkbox>
+      <mwc-checkbox label="My CheckBox" checkcolor="000000" checked=true>
+      </mwc-checkbox>
+    </mwc-card-content>
+    <mwc-card-actions>
+      <mwc-button>
+        Action
+      </mwc-button>
+      <mwc-button>
+        Action 1
+      </mwc-button>
+    </mwc-card-actions>
+  </mwc-card>
+  </mwc-theme>
 </body>
 </html>

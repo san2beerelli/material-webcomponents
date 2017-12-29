@@ -6,31 +6,1062 @@
 
 
 import {
-  MyComponent as MyComponent
-} from './components/my-component/my-component';
+  MWCButton as MwcButton
+} from './components/button/mwc-button';
 
 declare global {
-  interface HTMLMyComponentElement extends MyComponent, HTMLElement {
+  interface HTMLMwcButtonElement extends MwcButton, HTMLElement {
   }
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLMwcButtonElement: {
+    prototype: HTMLMwcButtonElement;
+    new (): HTMLMwcButtonElement;
   };
   interface HTMLElementTagNameMap {
-    "my-component": HTMLMyComponentElement;
+    "mwc-button": HTMLMwcButtonElement;
   }
   interface ElementTagNameMap {
-    "my-component": HTMLMyComponentElement;
+    "mwc-button": HTMLMwcButtonElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-component": JSXElements.MyComponentAttributes;
+      "mwc-button": JSXElements.MwcButtonAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      first?: string;
-      last?: string;
+    export interface MwcButtonAttributes extends HTMLAttributes {
+      backgroundcolor?: string;
+      color?: string;
+      compact?: boolean;
+      dense?: boolean;
+      disabled?: boolean;
+      href?: string;
+      icon?: string;
+      raised?: boolean;
+      ripple?: boolean;
+      stroked?: boolean;
+      unelevated?: boolean;
+    }
+  }
+}
+
+
+import {
+  MWCCardActions as MwcCardActions
+} from './components/card/mwc-card-actions';
+
+declare global {
+  interface HTMLMwcCardActionsElement extends MwcCardActions, HTMLElement {
+  }
+  var HTMLMwcCardActionsElement: {
+    prototype: HTMLMwcCardActionsElement;
+    new (): HTMLMwcCardActionsElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-card-actions": HTMLMwcCardActionsElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-card-actions": HTMLMwcCardActionsElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-card-actions": JSXElements.MwcCardActionsAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardActionsAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MWCCardContent as MwcCardContent
+} from './components/card/mwc-card-content';
+
+declare global {
+  interface HTMLMwcCardContentElement extends MwcCardContent, HTMLElement {
+  }
+  var HTMLMwcCardContentElement: {
+    prototype: HTMLMwcCardContentElement;
+    new (): HTMLMwcCardContentElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-card-content": HTMLMwcCardContentElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-card-content": HTMLMwcCardContentElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-card-content": JSXElements.MwcCardContentAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardContentAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MWCCardHeader as MwcCardHeader
+} from './components/card/mwc-card-header';
+
+declare global {
+  interface HTMLMwcCardHeaderElement extends MwcCardHeader, HTMLElement {
+  }
+  var HTMLMwcCardHeaderElement: {
+    prototype: HTMLMwcCardHeaderElement;
+    new (): HTMLMwcCardHeaderElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-card-header": HTMLMwcCardHeaderElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-card-header": HTMLMwcCardHeaderElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-card-header": JSXElements.MwcCardHeaderAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardHeaderAttributes extends HTMLAttributes {
+      subtitle?: string;
+      title?: string;
+    }
+  }
+}
+
+
+import {
+  MWCCardMedia as MwcCardMedia
+} from './components/card/mwc-card-media';
+
+declare global {
+  interface HTMLMwcCardMediaElement extends MwcCardMedia, HTMLElement {
+  }
+  var HTMLMwcCardMediaElement: {
+    prototype: HTMLMwcCardMediaElement;
+    new (): HTMLMwcCardMediaElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-card-media": HTMLMwcCardMediaElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-card-media": HTMLMwcCardMediaElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-card-media": JSXElements.MwcCardMediaAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardMediaAttributes extends HTMLAttributes {
+      mediaheight?: string;
+      src?: string;
+    }
+  }
+}
+
+
+import {
+  MWCCard as MwcCard
+} from './components/card/mwc-card';
+
+declare global {
+  interface HTMLMwcCardElement extends MwcCard, HTMLElement {
+  }
+  var HTMLMwcCardElement: {
+    prototype: HTMLMwcCardElement;
+    new (): HTMLMwcCardElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-card": HTMLMwcCardElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-card": HTMLMwcCardElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-card": JSXElements.MwcCardAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardAttributes extends HTMLAttributes {
+      height?: string;
+      width?: string;
+    }
+  }
+}
+
+
+import {
+  MWCCheckbox as MwcCheckbox
+} from './components/checkbox/mwc-checkbox';
+
+declare global {
+  interface HTMLMwcCheckboxElement extends MwcCheckbox, HTMLElement {
+  }
+  var HTMLMwcCheckboxElement: {
+    prototype: HTMLMwcCheckboxElement;
+    new (): HTMLMwcCheckboxElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-checkbox": HTMLMwcCheckboxElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-checkbox": HTMLMwcCheckboxElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-checkbox": JSXElements.MwcCheckboxAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCheckboxAttributes extends HTMLAttributes {
+      alignlabel?: string;
+      checkcolor?: string;
+      checked?: boolean;
+      disabled?: boolean;
+      indeterminate?: boolean;
+      label?: string;
+      name?: string;
+      ripple?: boolean;
+      value?: string;
+    }
+  }
+}
+
+
+import {
+  MWCDialogBody as MwcDialogBody
+} from './components/dialog/mwc-dialog-body';
+
+declare global {
+  interface HTMLMwcDialogBodyElement extends MwcDialogBody, HTMLElement {
+  }
+  var HTMLMwcDialogBodyElement: {
+    prototype: HTMLMwcDialogBodyElement;
+    new (): HTMLMwcDialogBodyElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-dialog-body": HTMLMwcDialogBodyElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-dialog-body": HTMLMwcDialogBodyElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-dialog-body": JSXElements.MwcDialogBodyAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcDialogBodyAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MWCDialogFooter as MwcDialogFooter
+} from './components/dialog/mwc-dialog-footer';
+
+declare global {
+  interface HTMLMwcDialogFooterElement extends MwcDialogFooter, HTMLElement {
+  }
+  var HTMLMwcDialogFooterElement: {
+    prototype: HTMLMwcDialogFooterElement;
+    new (): HTMLMwcDialogFooterElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-dialog-footer": HTMLMwcDialogFooterElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-dialog-footer": HTMLMwcDialogFooterElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-dialog-footer": JSXElements.MwcDialogFooterAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcDialogFooterAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MWCDialogHeader as MwcDialogHeader
+} from './components/dialog/mwc-dialog-header';
+
+declare global {
+  interface HTMLMwcDialogHeaderElement extends MwcDialogHeader, HTMLElement {
+  }
+  var HTMLMwcDialogHeaderElement: {
+    prototype: HTMLMwcDialogHeaderElement;
+    new (): HTMLMwcDialogHeaderElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-dialog-header": HTMLMwcDialogHeaderElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-dialog-header": HTMLMwcDialogHeaderElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-dialog-header": JSXElements.MwcDialogHeaderAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcDialogHeaderAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MWCDialog as MwcDialog
+} from './components/dialog/mwc-dialog';
+
+declare global {
+  interface HTMLMwcDialogElement extends MwcDialog, HTMLElement {
+  }
+  var HTMLMwcDialogElement: {
+    prototype: HTMLMwcDialogElement;
+    new (): HTMLMwcDialogElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-dialog": HTMLMwcDialogElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-dialog": HTMLMwcDialogElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-dialog": JSXElements.MwcDialogAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcDialogAttributes extends HTMLAttributes {
+      height?: string;
+      width?: string;
+    }
+  }
+}
+
+
+import {
+  MWCDrawer as MwcDrawer
+} from './components/drawer/mwc-drawer';
+
+declare global {
+  interface HTMLMwcDrawerElement extends MwcDrawer, HTMLElement {
+  }
+  var HTMLMwcDrawerElement: {
+    prototype: HTMLMwcDrawerElement;
+    new (): HTMLMwcDrawerElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-drawer": HTMLMwcDrawerElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-drawer": HTMLMwcDrawerElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-drawer": JSXElements.MwcDrawerAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcDrawerAttributes extends HTMLAttributes {
+      header?: boolean;
+      toolbarspacer?: boolean;
+      type?: String;
+    }
+  }
+}
+
+
+import {
+  MWCFab as MwcFab
+} from './components/fab/mwc-fab';
+
+declare global {
+  interface HTMLMwcFabElement extends MwcFab, HTMLElement {
+  }
+  var HTMLMwcFabElement: {
+    prototype: HTMLMwcFabElement;
+    new (): HTMLMwcFabElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-fab": HTMLMwcFabElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-fab": HTMLMwcFabElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-fab": JSXElements.MwcFabAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcFabAttributes extends HTMLAttributes {
+      backgroundcolor?: string;
+      color?: string;
+      icon?: string;
+      mini?: boolean;
+      ripple?: boolean;
+    }
+  }
+}
+
+
+import {
+  MWCGridListTile as MwcGridListTile
+} from './components/grid-list/mwc-grid-list-tile';
+
+declare global {
+  interface HTMLMwcGridListTileElement extends MwcGridListTile, HTMLElement {
+  }
+  var HTMLMwcGridListTileElement: {
+    prototype: HTMLMwcGridListTileElement;
+    new (): HTMLMwcGridListTileElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-grid-list-tile": HTMLMwcGridListTileElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-grid-list-tile": HTMLMwcGridListTileElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-grid-list-tile": JSXElements.MwcGridListTileAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcGridListTileAttributes extends HTMLAttributes {
+      titlebackgroundcolor?: string;
+    }
+  }
+}
+
+
+import {
+  MWCGridList as MwcGridList
+} from './components/grid-list/mwc-grid-list';
+
+declare global {
+  interface HTMLMwcGridListElement extends MwcGridList, HTMLElement {
+  }
+  var HTMLMwcGridListElement: {
+    prototype: HTMLMwcGridListElement;
+    new (): HTMLMwcGridListElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-grid-list": HTMLMwcGridListElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-grid-list": HTMLMwcGridListElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-grid-list": JSXElements.MwcGridListAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcGridListAttributes extends HTMLAttributes {
+      aspectratio?: string;
+      tiletitleposition?: string;
+      tilewidth?: string;
+    }
+  }
+}
+
+
+import {
+  MWCIconToggle as MwcIconToggle
+} from './components/icon-toggle/mwc-icon-toggle';
+
+declare global {
+  interface HTMLMwcIconToggleElement extends MwcIconToggle, HTMLElement {
+  }
+  var HTMLMwcIconToggleElement: {
+    prototype: HTMLMwcIconToggleElement;
+    new (): HTMLMwcIconToggleElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-icon-toggle": HTMLMwcIconToggleElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-icon-toggle": HTMLMwcIconToggleElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-icon-toggle": JSXElements.MwcIconToggleAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcIconToggleAttributes extends HTMLAttributes {
+      color?: string;
+      disabled?: boolean;
+      officon?: string;
+      officonlabel?: string;
+      onicon?: string;
+      oniconlabel?: string;
+      ripple?: boolean;
+      toggleon?: boolean;
+    }
+  }
+}
+
+
+import {
+  MWCListItem as MwcListItem
+} from './components/list/mwc-list-item';
+
+declare global {
+  interface HTMLMwcListItemElement extends MwcListItem, HTMLElement {
+  }
+  var HTMLMwcListItemElement: {
+    prototype: HTMLMwcListItemElement;
+    new (): HTMLMwcListItemElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-list-item": HTMLMwcListItemElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-list-item": HTMLMwcListItemElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-list-item": JSXElements.MwcListItemAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcListItemAttributes extends HTMLAttributes {
+      interactive?: boolean;
+      ripple?: boolean;
+    }
+  }
+}
+
+
+import {
+  MWCList as MwcList
+} from './components/list/mwc-list';
+
+declare global {
+  interface HTMLMwcListElement extends MwcList, HTMLElement {
+  }
+  var HTMLMwcListElement: {
+    prototype: HTMLMwcListElement;
+    new (): HTMLMwcListElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-list": HTMLMwcListElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-list": HTMLMwcListElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-list": JSXElements.MwcListAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcListAttributes extends HTMLAttributes {
+      borderlist?: boolean;
+      dense?: boolean;
+    }
+  }
+}
+
+
+import {
+  MWCMenuItem as MwcMenuItem
+} from './components/menu/mwc-menu-item';
+
+declare global {
+  interface HTMLMwcMenuItemElement extends MwcMenuItem, HTMLElement {
+  }
+  var HTMLMwcMenuItemElement: {
+    prototype: HTMLMwcMenuItemElement;
+    new (): HTMLMwcMenuItemElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-menu-item": HTMLMwcMenuItemElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-menu-item": HTMLMwcMenuItemElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-menu-item": JSXElements.MwcMenuItemAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcMenuItemAttributes extends HTMLAttributes {
+      disabled?: boolean;
+      role?: string;
+    }
+  }
+}
+
+
+import {
+  MWCMenu as MwcMenu
+} from './components/menu/mwc-menu';
+
+declare global {
+  interface HTMLMwcMenuElement extends MwcMenu, HTMLElement {
+  }
+  var HTMLMwcMenuElement: {
+    prototype: HTMLMwcMenuElement;
+    new (): HTMLMwcMenuElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-menu": HTMLMwcMenuElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-menu": HTMLMwcMenuElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-menu": JSXElements.MwcMenuAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcMenuAttributes extends HTMLAttributes {
+      open?: boolean;
+    }
+  }
+}
+
+
+import {
+  MWCPaper as MwcPaper
+} from './components/paper/mwc-paper';
+
+declare global {
+  interface HTMLMwcPaperElement extends MwcPaper, HTMLElement {
+  }
+  var HTMLMwcPaperElement: {
+    prototype: HTMLMwcPaperElement;
+    new (): HTMLMwcPaperElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-paper": HTMLMwcPaperElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-paper": HTMLMwcPaperElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-paper": JSXElements.MwcPaperAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcPaperAttributes extends HTMLAttributes {
+      elevation?: number;
+      height?: string;
+      radius?: number;
+      width?: string;
+    }
+  }
+}
+
+
+import {
+  MWCProgress as MwcProgress
+} from './components/progress/mwc-progress';
+
+declare global {
+  interface HTMLMwcProgressElement extends MwcProgress, HTMLElement {
+  }
+  var HTMLMwcProgressElement: {
+    prototype: HTMLMwcProgressElement;
+    new (): HTMLMwcProgressElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-progress": HTMLMwcProgressElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-progress": HTMLMwcProgressElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-progress": JSXElements.MwcProgressAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcProgressAttributes extends HTMLAttributes {
+      bufferbarcolor?: string;
+      height?: string;
+      progressbarcolor?: string;
+      reversed?: boolean;
+      show?: boolean;
+      type?: string;
+      width?: string;
+    }
+  }
+}
+
+
+import {
+  MWCRadio as MwcRadio
+} from './components/radio/mwc-radio';
+
+declare global {
+  interface HTMLMwcRadioElement extends MwcRadio, HTMLElement {
+  }
+  var HTMLMwcRadioElement: {
+    prototype: HTMLMwcRadioElement;
+    new (): HTMLMwcRadioElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-radio": HTMLMwcRadioElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-radio": HTMLMwcRadioElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-radio": JSXElements.MwcRadioAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcRadioAttributes extends HTMLAttributes {
+      borderlist?: boolean;
+      checked?: boolean;
+      dense?: boolean;
+      name?: string;
+      radiocolor?: string;
+      ripple?: boolean;
+    }
+  }
+}
+
+
+import {
+  MWCSelect as MwcSelect
+} from './components/select/mwc-select';
+
+declare global {
+  interface HTMLMwcSelectElement extends MwcSelect, HTMLElement {
+  }
+  var HTMLMwcSelectElement: {
+    prototype: HTMLMwcSelectElement;
+    new (): HTMLMwcSelectElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-select": HTMLMwcSelectElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-select": HTMLMwcSelectElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-select": JSXElements.MwcSelectAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcSelectAttributes extends HTMLAttributes {
+      borderlist?: boolean;
+      checked?: boolean;
+      dense?: boolean;
+      name?: string;
+      radiocolor?: string;
+      ripple?: boolean;
+    }
+  }
+}
+
+
+import {
+  MWCSlider as MwcSlider
+} from './components/slider/mwc-slider';
+
+declare global {
+  interface HTMLMwcSliderElement extends MwcSlider, HTMLElement {
+  }
+  var HTMLMwcSliderElement: {
+    prototype: HTMLMwcSliderElement;
+    new (): HTMLMwcSliderElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-slider": HTMLMwcSliderElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-slider": HTMLMwcSliderElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-slider": JSXElements.MwcSliderAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcSliderAttributes extends HTMLAttributes {
+      disabled?: boolean;
+      discrete?: boolean;
+      max?: number;
+      min?: number;
+      slidercolor?: string;
+      step?: number;
+      value?: number;
+    }
+  }
+}
+
+
+import {
+  MWCSnackbar as MwcSnackbar
+} from './components/snackbar/mwc-snackbar';
+
+declare global {
+  interface HTMLMwcSnackbarElement extends MwcSnackbar, HTMLElement {
+  }
+  var HTMLMwcSnackbarElement: {
+    prototype: HTMLMwcSnackbarElement;
+    new (): HTMLMwcSnackbarElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-snackbar": HTMLMwcSnackbarElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-snackbar": HTMLMwcSnackbarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-snackbar": JSXElements.MwcSnackbarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcSnackbarAttributes extends HTMLAttributes {
+      actioncolor?: string;
+      actiononbutton?: boolean;
+      actiontext?: string;
+      backgroundcolor?: string;
+      dismissesonaction?: boolean;
+      message?: string;
+      messagecolor?: string;
+      multiline?: boolean;
+      timeout?: number;
+    }
+  }
+}
+
+
+import {
+  MWCSwitch as MwcSwitch
+} from './components/switch/mwc-switch';
+
+declare global {
+  interface HTMLMwcSwitchElement extends MwcSwitch, HTMLElement {
+  }
+  var HTMLMwcSwitchElement: {
+    prototype: HTMLMwcSwitchElement;
+    new (): HTMLMwcSwitchElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-switch": HTMLMwcSwitchElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-switch": HTMLMwcSwitchElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-switch": JSXElements.MwcSwitchAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcSwitchAttributes extends HTMLAttributes {
+      checked?: boolean;
+      disabled?: boolean;
+      label?: string;
+      labelposition?: string;
+      switchcolor?: string;
+    }
+  }
+}
+
+
+import {
+  MWCTabbar as MwcTabbar
+} from './components/tabbar/mwc-tabbar';
+
+declare global {
+  interface HTMLMwcTabbarElement extends MwcTabbar, HTMLElement {
+  }
+  var HTMLMwcTabbarElement: {
+    prototype: HTMLMwcTabbarElement;
+    new (): HTMLMwcTabbarElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-tabbar": HTMLMwcTabbarElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-tabbar": HTMLMwcTabbarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-tabbar": JSXElements.MwcTabbarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcTabbarAttributes extends HTMLAttributes {
+      activeindex?: number;
+      scroller?: boolean;
+      tabs?: Array<any>;
+    }
+  }
+}
+
+
+import {
+  MWCTextfield as MwcTextfield
+} from './components/textfield/mwc-textfield';
+
+declare global {
+  interface HTMLMwcTextfieldElement extends MwcTextfield, HTMLElement {
+  }
+  var HTMLMwcTextfieldElement: {
+    prototype: HTMLMwcTextfieldElement;
+    new (): HTMLMwcTextfieldElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-textfield": HTMLMwcTextfieldElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-textfield": HTMLMwcTextfieldElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-textfield": JSXElements.MwcTextfieldAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcTextfieldAttributes extends HTMLAttributes {
+      dense?: boolean;
+      disabled?: boolean;
+      focused?: boolean;
+      fullwidth?: boolean;
+      helpertext?: string;
+      icon?: string;
+      iconposition?: string;
+      label?: string;
+      labelposition?: string;
+      minlength?: number;
+      outlined?: boolean;
+      required?: boolean;
+      showbox?: boolean;
+      textarea?: boolean;
+      type?: string;
+      value?: string;
+    }
+  }
+}
+
+
+import {
+  MWCTheme as MwcTheme
+} from './components/theme/mwc-theme';
+
+declare global {
+  interface HTMLMwcThemeElement extends MwcTheme, HTMLElement {
+  }
+  var HTMLMwcThemeElement: {
+    prototype: HTMLMwcThemeElement;
+    new (): HTMLMwcThemeElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-theme": HTMLMwcThemeElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-theme": HTMLMwcThemeElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-theme": JSXElements.MwcThemeAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcThemeAttributes extends HTMLAttributes {
+      fonts?: Array<any>;
+      theme?: Object;
+    }
+  }
+}
+
+
+import {
+  MWCToolbar as MwcToolbar
+} from './components/toolbar/mwc-toolbar';
+
+declare global {
+  interface HTMLMwcToolbarElement extends MwcToolbar, HTMLElement {
+  }
+  var HTMLMwcToolbarElement: {
+    prototype: HTMLMwcToolbarElement;
+    new (): HTMLMwcToolbarElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-toolbar": HTMLMwcToolbarElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-toolbar": HTMLMwcToolbarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-toolbar": JSXElements.MwcToolbarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcToolbarAttributes extends HTMLAttributes {
+      active?: boolean;
+      checked?: boolean;
+      icon?: string;
+      label?: string;
+      labelposition?: string;
+      switchcolor?: string;
+    }
+  }
+}
+
+
+import {
+  MWCTheme as MwcTypography
+} from './components/typography/mwc-typography';
+
+declare global {
+  interface HTMLMwcTypographyElement extends MwcTypography, HTMLElement {
+  }
+  var HTMLMwcTypographyElement: {
+    prototype: HTMLMwcTypographyElement;
+    new (): HTMLMwcTypographyElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-typography": HTMLMwcTypographyElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-typography": HTMLMwcTypographyElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-typography": JSXElements.MwcTypographyAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcTypographyAttributes extends HTMLAttributes {
+      color?: string;
+      display?: string;
+      type?: string;
     }
   }
 }

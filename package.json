@@ -16,7 +16,8 @@
     "start": "npm run dev"
   },
   "dependencies": {
-    "@stencil/core": "next"
+    "@stencil/core": "next",
+    "material-components-web": "^0.27.0"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",

@@ -1,0 +1,18 @@
+@import "@material/list/mdc-list.scss";
+@import "@material/ripple/mdc-ripple.scss";
+
+  .webmd-list-item{
+       &:hover {
+             cursor: pointer;
+             background-color:  rgba(0, 0, 0, .08);
+       }
+  }
+.mdc-list-item.mdc-ripple-upgraded{
+    left: auto !important;
+    right: auto !important;
+    width: auto !important;
+}
+.mdc-list-item{
+    min-height: 48px;
+    height: auto;
+}
