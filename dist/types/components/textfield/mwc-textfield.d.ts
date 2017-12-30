@@ -1,0 +1,33 @@
+import { EventEmitter } from '@stencil/core';
+export declare class MWCTextfield {
+    switchEl: HTMLElement;
+    type: string;
+    required: boolean;
+    minlength: number;
+    label: string;
+    value: string;
+    labelposition: string;
+    helpertext: string;
+    disabled: boolean;
+    showbox: boolean;
+    fullwidth: boolean;
+    textarea: boolean;
+    outlined: boolean;
+    dense: boolean;
+    focused: boolean;
+    icon: string;
+    iconposition: string;
+    selected: EventEmitter;
+    mdcTextfieldComponent: any;
+    mdcTextfield: any;
+    componentWillLoad(): void;
+    componentDidLoad(): void;
+    renderLabel(): JSX.Element;
+    getDivClassName(): string;
+    getTextfieldClassName(): string;
+    renderInputOrTextarea(): JSX.Element;
+    renderOutlined(): JSX.Element;
+    renderHelperText(): JSX.Element;
+    renderIcon(): JSX.Element;
+    render(): JSX.Element;
+}
