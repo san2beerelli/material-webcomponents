@@ -64,7 +64,7 @@ export class MWCButton{
   renderIcon(){
       if(this.icon){
           return(
-              <i class="material-icons webmd-icon">{this.icon}</i>
+              <i class="material-icons mwc-icon">{this.icon}</i>
           )
       }
       return null;

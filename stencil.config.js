@@ -9,6 +9,7 @@ exports.config = {
       'mwc-card-header',
       'mwc-card-media',
       'mwc-card',
+      'mwc-container',
       'mwc-checkbox',
       'mwc-dialog-body',
       'mwc-dialog-footer',
@@ -34,7 +35,12 @@ exports.config = {
       'mwc-textfield',
       'mwc-theme',
       'mwc-toolbar',
-      'mwc-typography'
+      'mwc-toolbar-section',
+      'mwc-toolbar-title',
+      'mwc-toolbar-icon',
+      'mwc-content-for-toolbar',
+      'mwc-typography',
+      'mwc-viewport'
       ] }
   ],
    sassConfig:{

@@ -5,38 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>material-webcomponents</title>
   <script src="/build/material-webcomponents.js"></script>
+  <style>
+     html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  </style>
 </head>
 <body>
-  <mwc-theme>
-    <mwc-button>Santhosh</mwc-button>
-    <mwc-button raised=true>Beerelli</mwc-button>
-    <mwc-typography display="inherit">
-      display1
-    </mwc-typography>
-    <mwc-typography type="title" color="#ff00ff" display="inherit">
-      Title
-    </mwc-typography>
-    <mwc-typography type="display4">
-      display1
-    </mwc-typography>
-    <mwc-card width="400px">
-    <mwc-card-header title="Title" subtitle="Sub Title">
-    </mwc-card-header>
-    <mwc-card-content>
-      <mwc-checkbox label="My CheckBox" alignlabel="right" >
-      </mwc-checkbox>
-      <mwc-checkbox label="My CheckBox" checkcolor="000000" checked=true>
-      </mwc-checkbox>
-    </mwc-card-content>
-    <mwc-card-actions>
-      <mwc-button>
-        Action
-      </mwc-button>
-      <mwc-button>
-        Action 1
-      </mwc-button>
-    </mwc-card-actions>
-  </mwc-card>
-  </mwc-theme>
+  <mwc-viewport>
+    <mwc-theme>
+    <mwc-toolbar type="flexible">
+      <mwc-toolbar-section align="start">
+          <mwc-toolbar-icon>
+            menu
+          </mwc-toolbar-icon>
+        <mwc-toolbar-title>
+          <mwc-typography type="title" display="inherit">
+            Title
+          </mwc-typography>
+        </mwc-toolbar-title>
+      </mwc-toolbar-section>
+      <mwc-toolbar-section align="end">
+
+      </mwc-toolbar-section>
+    </mwc-toolbar>
+    <mwc-content-for-toolbar>
+      <mwc-button>Santhosh</mwc-button>
+      <mwc-button icon="book" raised=true>Beerelli</mwc-button>
+      <mwc-typography display="inherit">
+        display1
+      </mwc-typography>
+      <mwc-typography type="title" color="#ff00ff" display="inherit">
+        Title
+      </mwc-typography>
+      <mwc-typography type="display4">
+        display1
+      </mwc-typography>
+      <mwc-card width="400px">
+      <mwc-card-header title="Title" subtitle="Sub Title">
+      </mwc-card-header>
+      <mwc-card-content>
+        <mwc-checkbox label="My CheckBox" alignlabel="right" >
+        </mwc-checkbox>
+        <mwc-checkbox label="My CheckBox" checkcolor="000000" checked=true>
+        </mwc-checkbox>
+      </mwc-card-content>
+      <mwc-card-actions>
+        <mwc-button>
+          Action
+        </mwc-button>
+        <mwc-button>
+          Action 1
+        </mwc-button>
+      </mwc-card-actions>
+    </mwc-card>
+    <mwc-container width="100%"
+    height="200px"
+    backgroundcolor="#f0f0f0" justifycontent="center" alignitems="center">
+       <mwc-button>
+          Button 1
+        </mwc-button>
+         <mwc-button>
+          Button 2
+        </mwc-button>
+         <mwc-button>
+          Button 3
+        </mwc-button>
+         <mwc-button>
+          Button 4
+        </mwc-button>
+    </mwc-container>
+
+    </mwc-content-for-toolbar>
+    </mwc-theme>
+  </mwc-viewport>
 </body>
 </html>

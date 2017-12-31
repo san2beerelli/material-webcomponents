@@ -218,6 +218,60 @@
       ]
     },
     {
+      "tag": "mwc-container",
+      "componentClass": "MWCContainer",
+      "componentPath": "components/container/mwc-container.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "aligncontent",
+          "type": "string"
+        },
+        {
+          "name": "alignitems",
+          "type": "string"
+        },
+        {
+          "name": "backgroundcolor",
+          "type": "string"
+        },
+        {
+          "name": "flexdirection",
+          "type": "string"
+        },
+        {
+          "name": "flexwrap",
+          "type": "string"
+        },
+        {
+          "name": "height",
+          "type": "string"
+        },
+        {
+          "name": "justifycontent",
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "type": "string"
+        }
+      ],
+      "hostElement": {
+        "name": "containerEl"
+      },
+      "slot": "hasSlots"
+    },
+    {
+      "tag": "mwc-content-for-toolbar",
+      "componentClass": "MWCContentForToolbar",
+      "componentPath": "components/toolbar/mwc-content-for-toolbar.js",
+      "styles": {},
+      "hostElement": {
+        "name": "contentToolbarEl"
+      },
+      "slot": "hasSlots"
+    },
+    {
       "tag": "mwc-dialog",
       "componentClass": "MWCDialog",
       "componentPath": "components/dialog/mwc-dialog.js",
@@ -1076,6 +1130,10 @@
           "type": "any"
         },
         {
+          "name": "icons",
+          "type": "any"
+        },
+        {
           "name": "theme",
           "type": "any"
         }
@@ -1098,38 +1156,56 @@
       },
       "props": [
         {
-          "name": "active",
-          "type": "boolean"
-        },
-        {
-          "name": "checked",
-          "type": "boolean"
-        },
-        {
-          "name": "icon",
-          "type": "string"
-        },
-        {
-          "name": "label",
-          "type": "string"
-        },
-        {
-          "name": "labelposition",
-          "type": "string"
-        },
-        {
-          "name": "switchcolor",
+          "name": "type",
           "type": "string"
         }
       ],
       "hostElement": {
         "name": "toolbarEl"
       },
-      "events": [
-        {
-          "event": "selected"
+      "slot": "hasSlots"
+    },
+    {
+      "tag": "mwc-toolbar-icon",
+      "componentClass": "MWCToolbarIcon",
+      "componentPath": "components/toolbar/mwc-toolbar-icon.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/toolbar/mwc-toolbar-icon.scss"
+          ]
         }
-      ]
+      },
+      "hostElement": {
+        "name": "toolbarIconEl"
+      },
+      "slot": "hasSlots"
+    },
+    {
+      "tag": "mwc-toolbar-section",
+      "componentClass": "MWCToolbarSection",
+      "componentPath": "components/toolbar/mwc-toolbar-section.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "align",
+          "type": "string"
+        }
+      ],
+      "hostElement": {
+        "name": "toolbarSectionEl"
+      },
+      "slot": "hasSlots"
+    },
+    {
+      "tag": "mwc-toolbar-title",
+      "componentClass": "MWCToolbarTitle",
+      "componentPath": "components/toolbar/mwc-toolbar-title.js",
+      "styles": {},
+      "hostElement": {
+        "name": "toolbarTitleEl"
+      },
+      "slot": "hasSlots"
     },
     {
       "tag": "mwc-typography",
@@ -1160,6 +1236,22 @@
         "name": "typographyEl"
       },
       "slot": "hasSlots"
+    },
+    {
+      "tag": "mwc-viewport",
+      "componentClass": "MWCViewport",
+      "componentPath": "components/viewport/mwc-viewport.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "backgroundcolor",
+          "type": "string"
+        }
+      ],
+      "hostElement": {
+        "name": "viewportEl"
+      },
+      "slot": "hasSlots"
     }
   ],
   "bundles": [
@@ -1172,6 +1264,8 @@
         "mwc-card-header",
         "mwc-card-media",
         "mwc-checkbox",
+        "mwc-container",
+        "mwc-content-for-toolbar",
         "mwc-dialog",
         "mwc-dialog-body",
         "mwc-dialog-footer",
@@ -1196,7 +1290,11 @@
         "mwc-textfield",
         "mwc-theme",
         "mwc-toolbar",
-        "mwc-typography"
+        "mwc-toolbar-icon",
+        "mwc-toolbar-section",
+        "mwc-toolbar-title",
+        "mwc-typography",
+        "mwc-viewport"
       ]
     }
   ],

@@ -1,17 +1,9 @@
-import { EventEmitter } from '@stencil/core';
 export declare class MWCToolbar {
-    toolbarEl: HTMLElement;
-    checked: boolean;
-    switchcolor: string;
-    labelposition: string;
-    active: boolean;
-    icon: string;
-    label: string;
-    selected: EventEmitter;
-    mdcTabComponent: any;
-    mdcTab: any;
+    toolbarEl: HTMLDivElement;
+    type: string;
+    toolbarComponent: any;
     componentWillLoad(): void;
     componentDidLoad(): void;
-    getTabClassName(): string;
+    getToolBarClassName(): string;
     render(): JSX.Element;
 }

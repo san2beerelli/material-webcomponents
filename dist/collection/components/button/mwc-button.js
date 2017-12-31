@@ -51,7 +51,7 @@ export class MWCButton {
     }
     renderIcon() {
         if (this.icon) {
-            return (h("i", { class: "material-icons webmd-icon" }, this.icon));
+            return (h("i", { class: "material-icons mwc-icon" }, this.icon));
         }
         return null;
     }

@@ -1,1 +1,10 @@
 @import "@material/button/mdc-button.scss";
+.mwc-icon{
+    display: inline-block !important;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    font-size: 18px !important;
+    line-height: inherit !important;
+    vertical-align: top;
+}

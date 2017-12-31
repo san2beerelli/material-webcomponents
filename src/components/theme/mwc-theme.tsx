@@ -6,8 +6,10 @@ import { Component, Prop, Element  } from '@stencil/core';
 })
 export class MWCTheme{
   @Element() themeEl : HTMLElement;
-  @Prop() theme: Object;
-  @Prop() fonts: Array<any> = ['https://fonts.googleapis.com/css?family=Roboto:300,400,500']
+  @Prop() theme: object = {};
+  @Prop() fonts: Array<string> = [] ;
+  @Prop() icons: Array<string> = [] ;
+  fontsAndIcons: Array<string> = ['https://fonts.googleapis.com/css?family=Roboto:300,400,500','https://fonts.googleapis.com/icon?family=Material+Icons']
   /*
   {
       "primary" : "#8BC34A",
@@ -29,7 +31,8 @@ export class MWCTheme{
   }
 
   componentWillLoad(){
-      this.fonts.forEach((font)=>{
+      const urls = [...this.fonts,...this.fontsAndIcons, ...this.icons]
+       urls.forEach((font)=>{
         this.getLinkNode(font);
       })
        if(this.theme){

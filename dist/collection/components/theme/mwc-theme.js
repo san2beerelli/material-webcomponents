@@ -1,6 +1,9 @@
 export class MWCTheme {
     constructor() {
-        this.fonts = ['https://fonts.googleapis.com/css?family=Roboto:300,400,500'];
+        this.theme = {};
+        this.fonts = [];
+        this.icons = [];
+        this.fontsAndIcons = ['https://fonts.googleapis.com/css?family=Roboto:300,400,500', 'https://fonts.googleapis.com/icon?family=Material+Icons'];
     }
     /*
     {
@@ -21,7 +24,8 @@ export class MWCTheme {
         document.head.appendChild(linkNode);
     }
     componentWillLoad() {
-        this.fonts.forEach((font) => {
+        const urls = [...this.fonts, ...this.fontsAndIcons, ...this.icons];
+        urls.forEach((font) => {
             this.getLinkNode(font);
         });
         if (this.theme) {

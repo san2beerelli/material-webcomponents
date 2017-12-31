@@ -1,34 +1,21 @@
 import { EventEmitter } from '@stencil/core';
-import { MDCTab } from '@material/tabs';
+import { MDCToolbar } from '@material/toolbar';
 export class MWCToolbar {
-    constructor() {
-        this.checked = false;
-        this.switchcolor = '';
-        this.labelposition = 'right';
-        this.active = false;
-        this.icon = '';
-        this.label = '';
-    }
     componentWillLoad() {
-        if (this.switchcolor) {
-            //  this.switchEl.style.setProperty('--mdc-theme-secondary',this.switchcolor);
-        }
+        this.toolbarEl.className = this.getToolBarClassName();
     }
     componentDidLoad() {
-        //this.mdcTabComponent = MDCTab.attachTo(this.mdcTab)
+        this.toolbarComponent = MDCToolbar.attachTo(this.toolbarEl);
     }
-    getTabClassName() {
-        let className = 'mdc-tab mdc-tab--with-icon-and-text';
-        if (this.active) {
-            className = `${className} mdc-tab--active`;
+    getToolBarClassName() {
+        let className = 'mdc-toolbar';
+        if (this.type !== undefined) {
+            className = `${className} mdc-toolbar--fixed`;
         }
         return className;
     }
     render() {
-        return (h("div", { class: "mdc-toolbar" },
-            h("div", { class: "mdc-toolbar__row" },
-                h("span", { class: "mdc-toolbar__title" }, "This is a super super super super long title"),
-                h("section", { class: "mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--shrink-to-fit" },
-                    h("a", { class: "material-icons search align-icons", "aria-label": "Search" }, "search")))));
+        return (h("div", { class: "mdc-toolbar__row" },
+            h("slot", null)));
     }
 }

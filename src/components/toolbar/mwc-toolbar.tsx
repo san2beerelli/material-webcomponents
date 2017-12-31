@@ -1,55 +1,37 @@
 import { Component, Prop, Element,  Method, Event, EventEmitter } from '@stencil/core';
-import {MDCTab} from '@material/tabs'
+import {MDCToolbar} from '@material/toolbar'
 
 @Component({
   tag: 'mwc-toolbar',
   styleUrl: 'mwc-toolbar.scss',
   shadow: false
 })
-export class MWCToolbar{
+export class MWCToolbar {
 
-  @Element() toolbarEl : HTMLElement;
-  @Prop() checked : boolean = false;
-  @Prop() switchcolor : string = '';
-  @Prop() labelposition: string = 'right';
-  @Prop() active: boolean = false;
-  @Prop() icon: string = '';
-  @Prop() label: string = '';
-
-  @Event() selected: EventEmitter;
-
-  mdcTabComponent:any;
-  mdcTab: any;
+  @Element() toolbarEl : HTMLDivElement;
+  @Prop() type : string;
+  //fixed,waterfall,flexible, fixed-lastrow-only
+  toolbarComponent: any;
 
   componentWillLoad(){
-      if(this.switchcolor){
-      //  this.switchEl.style.setProperty('--mdc-theme-secondary',this.switchcolor);
-      }
+    this.toolbarEl.className = this.getToolBarClassName()
   }
    componentDidLoad(){
-      //this.mdcTabComponent = MDCTab.attachTo(this.mdcTab)
+    this.toolbarComponent = MDCToolbar.attachTo(this.toolbarEl)
   }
-  getTabClassName(){
-       let className = 'mdc-tab mdc-tab--with-icon-and-text';
-      if(this.active){
-         className = `${className} mdc-tab--active`
-      }
+  getToolBarClassName(){
+     let className = 'mdc-toolbar';
+     if(this.type !== undefined){
+         className = `${className} mdc-toolbar--fixed`
+     }
       return className;
-
   }
 
   render() {
     return (
-       <div class="mdc-toolbar">
         <div class="mdc-toolbar__row">
-
-                <span class="mdc-toolbar__title">This is a super super super super long title</span>
-
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--shrink-to-fit">
-                <a class="material-icons search align-icons" aria-label="Search">search</a>
-            </section>
-        </div>
-        </div>
+            <slot />
+         </div>
     )
   }
 }

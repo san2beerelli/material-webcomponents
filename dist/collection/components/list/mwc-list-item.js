@@ -23,7 +23,7 @@ export class MWCListItem {
     getListItemClassName() {
         let className = 'mdc-list-item';
         if (this.interactive) {
-            className = ` ${className} webmd-list-item`;
+            className = ` ${className} mwc-list-item`;
         }
         return className;
     }

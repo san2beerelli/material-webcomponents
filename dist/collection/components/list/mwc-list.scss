@@ -2,11 +2,11 @@
 @import "@material/ripple/mdc-ripple.scss";
 
 
- .webmd-bordered-list {
+ .mwc-bordered-list {
     padding: 0;
     border-top: 1px solid rgba(0, 0, 0, .12);
   }
-  .webmd-bordered-list .mdc-list-item {
+  .mwc-bordered-list .mdc-list-item {
     padding: 0 16px;
     border: 1px solid rgba(0, 0, 0, .12);
     border-top: none;

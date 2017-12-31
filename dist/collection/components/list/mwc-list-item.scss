@@ -1,7 +1,7 @@
 @import "@material/list/mdc-list.scss";
 @import "@material/ripple/mdc-ripple.scss";
 
-  .webmd-list-item{
+  .mwc-list-item{
        &:hover {
              cursor: pointer;
              background-color:  rgba(0, 0, 0, .08);

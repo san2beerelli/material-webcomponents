@@ -14,7 +14,7 @@ export class MWCList{
    getListClassName(){
       let className: string = 'mdc-list';
       if(this.borderlist){
-          className = ` ${className} webmd-bordered-list`;
+          className = ` ${className} mwc-bordered-list`;
       }
       if(this.dense){
           className = ` ${className} mdc-list--dense`;

@@ -237,6 +237,43 @@ declare global {
 
 
 import {
+  MWCContainer as MwcContainer
+} from './components/container/mwc-container';
+
+declare global {
+  interface HTMLMwcContainerElement extends MwcContainer, HTMLElement {
+  }
+  var HTMLMwcContainerElement: {
+    prototype: HTMLMwcContainerElement;
+    new (): HTMLMwcContainerElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-container": HTMLMwcContainerElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-container": HTMLMwcContainerElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-container": JSXElements.MwcContainerAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcContainerAttributes extends HTMLAttributes {
+      aligncontent?: string;
+      alignitems?: string;
+      backgroundcolor?: string;
+      flexdirection?: string;
+      flexwrap?: string;
+      height?: string;
+      justifycontent?: string;
+      width?: string;
+    }
+  }
+}
+
+
+import {
   MWCDialogBody as MwcDialogBody
 } from './components/dialog/mwc-dialog-body';
 
@@ -993,8 +1030,129 @@ declare global {
   }
   namespace JSXElements {
     export interface MwcThemeAttributes extends HTMLAttributes {
-      fonts?: Array<any>;
-      theme?: Object;
+      fonts?: Array<string>;
+      icons?: Array<string>;
+      theme?: object;
+    }
+  }
+}
+
+
+import {
+  MWCContentForToolbar as MwcContentForToolbar
+} from './components/toolbar/mwc-content-for-toolbar';
+
+declare global {
+  interface HTMLMwcContentForToolbarElement extends MwcContentForToolbar, HTMLElement {
+  }
+  var HTMLMwcContentForToolbarElement: {
+    prototype: HTMLMwcContentForToolbarElement;
+    new (): HTMLMwcContentForToolbarElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-content-for-toolbar": HTMLMwcContentForToolbarElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-content-for-toolbar": HTMLMwcContentForToolbarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-content-for-toolbar": JSXElements.MwcContentForToolbarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcContentForToolbarAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MWCToolbarIcon as MwcToolbarIcon
+} from './components/toolbar/mwc-toolbar-icon';
+
+declare global {
+  interface HTMLMwcToolbarIconElement extends MwcToolbarIcon, HTMLElement {
+  }
+  var HTMLMwcToolbarIconElement: {
+    prototype: HTMLMwcToolbarIconElement;
+    new (): HTMLMwcToolbarIconElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-toolbar-icon": HTMLMwcToolbarIconElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-toolbar-icon": HTMLMwcToolbarIconElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-toolbar-icon": JSXElements.MwcToolbarIconAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcToolbarIconAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  MWCToolbarSection as MwcToolbarSection
+} from './components/toolbar/mwc-toolbar-section';
+
+declare global {
+  interface HTMLMwcToolbarSectionElement extends MwcToolbarSection, HTMLElement {
+  }
+  var HTMLMwcToolbarSectionElement: {
+    prototype: HTMLMwcToolbarSectionElement;
+    new (): HTMLMwcToolbarSectionElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-toolbar-section": HTMLMwcToolbarSectionElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-toolbar-section": HTMLMwcToolbarSectionElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-toolbar-section": JSXElements.MwcToolbarSectionAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcToolbarSectionAttributes extends HTMLAttributes {
+      align?: string;
+    }
+  }
+}
+
+
+import {
+  MWCToolbarTitle as MwcToolbarTitle
+} from './components/toolbar/mwc-toolbar-title';
+
+declare global {
+  interface HTMLMwcToolbarTitleElement extends MwcToolbarTitle, HTMLElement {
+  }
+  var HTMLMwcToolbarTitleElement: {
+    prototype: HTMLMwcToolbarTitleElement;
+    new (): HTMLMwcToolbarTitleElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-toolbar-title": HTMLMwcToolbarTitleElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-toolbar-title": HTMLMwcToolbarTitleElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-toolbar-title": JSXElements.MwcToolbarTitleAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcToolbarTitleAttributes extends HTMLAttributes {
+      
     }
   }
 }
@@ -1024,12 +1182,7 @@ declare global {
   }
   namespace JSXElements {
     export interface MwcToolbarAttributes extends HTMLAttributes {
-      active?: boolean;
-      checked?: boolean;
-      icon?: string;
-      label?: string;
-      labelposition?: string;
-      switchcolor?: string;
+      type?: string;
     }
   }
 }
@@ -1062,6 +1215,36 @@ declare global {
       color?: string;
       display?: string;
       type?: string;
+    }
+  }
+}
+
+
+import {
+  MWCViewport as MwcViewport
+} from './components/viewport/mwc-viewport';
+
+declare global {
+  interface HTMLMwcViewportElement extends MwcViewport, HTMLElement {
+  }
+  var HTMLMwcViewportElement: {
+    prototype: HTMLMwcViewportElement;
+    new (): HTMLMwcViewportElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mwc-viewport": HTMLMwcViewportElement;
+  }
+  interface ElementTagNameMap {
+    "mwc-viewport": HTMLMwcViewportElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mwc-viewport": JSXElements.MwcViewportAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcViewportAttributes extends HTMLAttributes {
+      backgroundcolor?: string;
     }
   }
 }
