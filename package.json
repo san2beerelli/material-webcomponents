@@ -1,17 +1,17 @@
 {
   "name": "material-webcomponents",
-  "version": "1.0.0-beta.1",
-  "description": "Webcomponents that implements Google's Material Design. Developed material-webcomponents using Stenciljs.",
+  "version": "1.0.0-beta.2",
+  "description":
+    "Webcomponents that implements Google's Material Design. Developed material-webcomponents using Stenciljs.",
   "main": "dist/material-webcomponents.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "browser": "dist/material-webcomponents.js",
   "scripts": {
     "build": "stencil build",
-    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "dev":
+      "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev"
   },
@@ -35,7 +35,8 @@
     "Angular Components",
     "Javascript Components"
   ],
-  "author": "Santhosh Beerelli <san2beerelli@gmail.com> (http://san2beerelli.com/)",
+  "author":
+    "Santhosh Beerelli <san2beerelli@gmail.com> (http://san2beerelli.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/san2beerelli/material-webcomponents/issues"
