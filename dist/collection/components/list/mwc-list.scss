@@ -1,0 +1,13 @@
+@import "@material/list/mdc-list.scss";
+@import "@material/ripple/mdc-ripple.scss";
+
+
+ .mwc-bordered-list {
+    padding: 0;
+    border-top: 1px solid rgba(0, 0, 0, .12);
+  }
+  .mwc-bordered-list .mdc-list-item {
+    padding: 0 16px;
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-top: none;
+  }
