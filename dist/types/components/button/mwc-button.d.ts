@@ -1,3 +1,4 @@
+import { colorType } from './mwc-button-types';
 export declare class MWCButton {
     icon: string;
     raised: boolean;
@@ -5,18 +6,20 @@ export declare class MWCButton {
     stroked: boolean;
     dense: boolean;
     compact: boolean;
-    color: string;
+    color: colorType;
     backgroundcolor: string;
     disabled: boolean;
     ripple: boolean;
+    fab: boolean;
+    mini: boolean;
     href: string;
     buttonRipple: any;
     mwcButton: any;
-    btnEl: HTMLElement;
-    getButtonClassName(): string;
+    btnEl: HTMLButtonElement;
+    classes: any;
     componentWillLoad(): void;
+    getClassNames(): Array<string>;
     componentDidLoad(): void;
-    componentDidUnload(): void;
     renderIcon(): JSX.Element;
     renderButton(): JSX.Element;
     render(): JSX.Element;

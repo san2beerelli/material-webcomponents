@@ -1,8 +1,9 @@
 import { Component, Prop, Element } from '@stencil/core';
+import ListStyle from './mwc-list-style'
 
 @Component({
   tag: 'mwc-list',
-  styleUrl: 'mwc-list.scss',
+  //styleUrl: 'mwc-list.scss',
   shadow: false
 })
 export class MWCList{
@@ -10,21 +11,23 @@ export class MWCList{
   @Element() listEl : HTMLElement;
   @Prop() borderlist : boolean = true;
   @Prop() dense: boolean = false;
+  listStyle : any;
 
-   getListClassName(){
-      let className: string = 'mdc-list';
-      if(this.borderlist){
-          className = ` ${className} mwc-bordered-list`;
+  componentWillLoad(){
+      this.listStyle = new ListStyle()
+       let changeStyle: object = {
+
       }
-      if(this.dense){
-          className = ` ${className} mdc-list--dense`;
-      }
-      return className;
+     this.listStyle.setup(changeStyle)
+  }
+  getClassNames():Array<string>{
+      let classNames:Array<string> = ['root']
+      return classNames
   }
 
   render() {
     return (
-     <ul class={this.getListClassName()}>
+     <ul class={this.listStyle.getClassName(this.getClassNames())}>
          <slot />
      </ul>
     )

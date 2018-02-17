@@ -2,6 +2,8 @@ export declare class MWCList {
     listEl: HTMLElement;
     borderlist: boolean;
     dense: boolean;
-    getListClassName(): string;
+    listStyle: any;
+    componentWillLoad(): void;
+    getClassNames(): Array<string>;
     render(): JSX.Element;
 }

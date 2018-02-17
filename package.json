@@ -17,11 +17,17 @@
   },
   "dependencies": {
     "@stencil/core": "next",
-    "material-components-web": "^0.27.0"
+    "classnames": "^2.2.5",
+    "deepmerge": "^2.0.1",
+    "jss": "^9.5.0",
+    "jss-preset-default": "^4.0.1",
+    "material-components-web": "^0.27.0",
+    "warning": "^3.0.0"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
-    "@stencil/utils": "latest"
+    "@stencil/utils": "latest",
+    "tslint": "^5.9.1"
   },
   "repository": {
     "type": "git",

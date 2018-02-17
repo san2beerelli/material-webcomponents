@@ -4,13 +4,7 @@
       "tag": "mwc-button",
       "componentClass": "MWCButton",
       "componentPath": "components/button/mwc-button.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/button/mwc-button.scss"
-          ]
-        }
-      },
+      "styles": {},
       "props": [
         {
           "name": "backgroundcolor",
@@ -18,7 +12,7 @@
         },
         {
           "name": "color",
-          "type": "string"
+          "type": "any"
         },
         {
           "name": "compact",
@@ -33,12 +27,20 @@
           "type": "boolean"
         },
         {
+          "name": "fab",
+          "type": "boolean"
+        },
+        {
           "name": "href",
           "type": "string"
         },
         {
           "name": "icon",
           "type": "string"
+        },
+        {
+          "name": "mini",
+          "type": "boolean"
         },
         {
           "name": "raised",
@@ -66,17 +68,19 @@
       "tag": "mwc-card",
       "componentClass": "MWCCard",
       "componentPath": "components/card/mwc-card.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/card/mwc-card.scss"
-          ]
-        }
-      },
+      "styles": {},
       "props": [
         {
           "name": "height",
           "type": "string"
+        },
+        {
+          "name": "radius",
+          "type": "number"
+        },
+        {
+          "name": "raised",
+          "type": "boolean"
         },
         {
           "name": "width",
@@ -105,13 +109,7 @@
       "tag": "mwc-card-content",
       "componentClass": "MWCCardContent",
       "componentPath": "components/card/mwc-card-content.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/card/mwc-card-content.scss"
-          ]
-        }
-      },
+      "styles": {},
       "slot": "hasSlots"
     },
     {
@@ -141,13 +139,7 @@
       "tag": "mwc-card-media",
       "componentClass": "MWCCardMedia",
       "componentPath": "components/card/mwc-card-media.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/card/mwc-card-media.scss"
-          ]
-        }
-      },
+      "styles": {},
       "props": [
         {
           "name": "mediaheight",
@@ -548,13 +540,7 @@
       "tag": "mwc-list",
       "componentClass": "MWCList",
       "componentPath": "components/list/mwc-list.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/list/mwc-list.scss"
-          ]
-        }
-      },
+      "styles": {},
       "props": [
         {
           "name": "borderlist",
@@ -658,13 +644,7 @@
       "tag": "mwc-paper",
       "componentClass": "MWCPaper",
       "componentPath": "components/paper/mwc-paper.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/paper/mwc-paper.scss"
-          ]
-        }
-      },
+      "styles": {},
       "props": [
         {
           "name": "elevation",
@@ -683,9 +663,6 @@
           "type": "string"
         }
       ],
-      "hostElement": {
-        "name": "paperEl"
-      },
       "slot": "hasSlots"
     },
     {
@@ -1117,13 +1094,7 @@
       "tag": "mwc-theme",
       "componentClass": "MWCTheme",
       "componentPath": "components/theme/mwc-theme.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/theme/mwc-theme.scss"
-          ]
-        }
-      },
+      "styles": {},
       "props": [
         {
           "name": "fonts",
@@ -1209,27 +1180,37 @@
     },
     {
       "tag": "mwc-typography",
-      "componentClass": "MWCTheme",
+      "componentClass": "MWCTypography",
       "componentPath": "components/typography/mwc-typography.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/typography/mwc-typography.scss"
-          ]
-        }
-      },
+      "styles": {},
       "props": [
+        {
+          "name": "align",
+          "type": "any"
+        },
         {
           "name": "color",
           "type": "string"
         },
         {
           "name": "display",
-          "type": "string"
+          "type": "any"
+        },
+        {
+          "name": "gutterbottom",
+          "type": "boolean"
+        },
+        {
+          "name": "nowrap",
+          "type": "boolean"
+        },
+        {
+          "name": "styles",
+          "type": "any"
         },
         {
           "name": "type",
-          "type": "string"
+          "type": "any"
         }
       ],
       "hostElement": {

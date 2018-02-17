@@ -1,10 +1,10 @@
 export declare class MWCPaper {
-    paperEl: HTMLElement;
     width: string;
     height: string;
     elevation: number;
     radius: number;
-    paperFigure: any;
-    componentDidLoad(): void;
+    paperStyle: any;
+    componentWillLoad(): void;
+    getClassNames(): Array<string>;
     render(): JSX.Element;
 }

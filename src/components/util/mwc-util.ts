@@ -1,10 +1,15 @@
-export class MWCUtil {
-  saveToLocalStorage(){
+import theme from './theme'
+export function setTheme(data){
       try{
-          console.log("santhosh");
+          localStorage.setItem('theme',JSON.stringify(data))
       }catch(err){
           console.log(err)
       }
   }
-
+export function getTheme():Object{
+      const themeData = localStorage.getItem('theme');
+      if(themeData){
+        return JSON.parse(themeData)
+      }
+      return theme
 }

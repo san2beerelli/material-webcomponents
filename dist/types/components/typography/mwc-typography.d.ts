@@ -1,10 +1,13 @@
-export declare class MWCTheme {
+import { typographyType, displayType, alignType } from './mwc-typograpy-types';
+export declare class MWCTypography {
     typographyEl: HTMLElement;
-    type: string;
+    type: typographyType;
     color: string;
-    display: string;
-    mwcTypograpyDiv: any;
+    display: displayType;
+    align: alignType;
+    nowrap: boolean;
+    gutterbottom: boolean;
+    styles: any;
     componentWillLoad(): void;
-    getTypographyClassName(): string;
     render(): JSX.Element;
 }

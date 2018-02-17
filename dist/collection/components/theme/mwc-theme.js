@@ -1,10 +1,6 @@
+import theme from '../util/theme';
+import { setTheme, getTheme } from '../util/mwc-util';
 export class MWCTheme {
-    constructor() {
-        this.theme = {};
-        this.fonts = [];
-        this.icons = [];
-        this.fontsAndIcons = ['https://fonts.googleapis.com/css?family=Roboto:300,400,500', 'https://fonts.googleapis.com/icon?family=Material+Icons'];
-    }
     /*
     {
         "primary" : "#8BC34A",
@@ -16,7 +12,14 @@ export class MWCTheme {
         "background": '#BDBDBD'
     };
      */
-    getLinkNode(fontUrl) {
+    constructor() {
+        this.theme = {};
+        this.fonts = [];
+        this.icons = [];
+        this.fontsAndIcons = ['https://fonts.googleapis.com/css?family=Roboto:300,400,500', 'https://fonts.googleapis.com/icon?family=Material+Icons'];
+        setTheme(theme);
+    }
+    setLinkNode(fontUrl) {
         var linkNode = document.createElement('link');
         linkNode.type = "text/css";
         linkNode.rel = "stylesheet";
@@ -26,13 +29,14 @@ export class MWCTheme {
     componentWillLoad() {
         const urls = [...this.fonts, ...this.fontsAndIcons, ...this.icons];
         urls.forEach((font) => {
-            this.getLinkNode(font);
+            this.setLinkNode(font);
         });
-        if (this.theme) {
-            Object.keys(this.theme).forEach((key) => {
-                this.themeEl.style.setProperty(`--mdc-theme-${key}`, this.theme[key]);
-            });
-        }
+        //  if(this.theme){
+        //   Object.keys(this.theme).forEach((key)=>{
+        //       this.themeEl.style.setProperty(`--mdc-theme-${key}`,this.theme[key]);
+        //   })
+        //  }
+        //   console.log(getTheme())
     }
     render() {
         return (h("slot", null));

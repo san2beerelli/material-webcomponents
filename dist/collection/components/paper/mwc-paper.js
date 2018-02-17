@@ -1,25 +1,28 @@
+import PaperStyle from './mwc-paper-style';
 export class MWCPaper {
     constructor() {
+        this.width = 'auto';
+        this.height = 'auto';
         this.elevation = 2;
-        this.radius = 2;
+        this.radius = 4;
     }
-    componentDidLoad() {
-        let paperStyles = '';
-        if (this.width) {
-            paperStyles = `width:${this.width}; `;
-        }
-        if (this.height) {
-            paperStyles = `${paperStyles}height:${this.height}; `;
-        }
-        if (this.radius) {
-            paperStyles = `${paperStyles}border-radius:${this.radius}px; `;
-        }
-        if (paperStyles.length > 0) {
-            this.paperFigure.setAttribute('style', paperStyles);
-        }
+    componentWillLoad() {
+        this.paperStyle = new PaperStyle();
+        let changeStyle = {
+            rounded: {
+                borderRadius: this.radius,
+                width: this.width,
+                height: this.height,
+            }
+        };
+        this.paperStyle.setup(changeStyle);
+    }
+    getClassNames() {
+        let classNames = ['root', `shadow${this.elevation}`, 'rounded'];
+        return classNames;
     }
     render() {
-        return (h("figure", { ref: (paperFigure) => { this.paperFigure = paperFigure; }, class: `mdc-elevation--z${this.elevation}` },
+        return (h("div", { class: this.paperStyle.getClassName(this.getClassNames()) },
             h("slot", null)));
     }
 }

@@ -1,4 +1,21 @@
+import CardMediaStyle from './mwc-card-media-style';
 export class MWCCardMedia {
+    constructor() {
+        this.mediaheight = 'auto';
+    }
+    componentWillLoad() {
+        this.cardMediaStyle = new CardMediaStyle();
+        let changeStyle = {
+            rootMedia: {
+                height: this.mediaheight
+            }
+        };
+        this.cardMediaStyle.setup(changeStyle);
+    }
+    getClassNames() {
+        let classNames = ['root', 'rootMedia'];
+        return classNames;
+    }
     getMediaClass() {
         let mediaClass = 'mdc-card__media-item';
         if (this.mediaheight) {
@@ -11,7 +28,6 @@ export class MWCCardMedia {
         return mediaClass;
     }
     render() {
-        return (h("section", { class: "mdc-card__media" },
-            h("img", { class: this.getMediaClass(), src: this.src })));
+        return (h("img", { class: this.cardMediaStyle.getClassName(this.getClassNames()), src: this.src }));
     }
 }

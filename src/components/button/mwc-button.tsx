@@ -1,8 +1,11 @@
 import { Component, Prop, Element } from '@stencil/core';
-import {MDCRipple} from '@material/ripple';
+
+import ButtonStyle, {rippleColors} from './mwc-button-style'
+import tmripple from '../util/ripple'
+import {colorType, buttonColor} from './mwc-button-types'
+
 @Component({
   tag: 'mwc-button',
-  styleUrl: 'mwc-button.scss',
   shadow: false
 })
 export class MWCButton{
@@ -13,53 +16,68 @@ export class MWCButton{
   @Prop() stroked: boolean = false;
   @Prop() dense: boolean = false;
   @Prop() compact: boolean = false;
-  @Prop() color: string;
-  @Prop() backgroundcolor: string;
+  @Prop() color:colorType = "default"
+  @Prop() backgroundcolor: string = "#ff0000";
   @Prop() disabled: boolean = false;
   @Prop() ripple: boolean = true;
+  @Prop() fab: boolean = false;
+  @Prop() mini: boolean = false;
   @Prop() href: string;
   buttonRipple: any;
   mwcButton:any;
-  @Element() btnEl : HTMLElement;
 
-  getButtonClassName():string{
-      let className: string = "mdc-button";
-      if(this.raised){
-          className = `${className} mdc-button--raised`;
-      }
-      if(this.unelevated){
-          className = `${className} mdc-button--unelevated`;
-      }
-      if(this.stroked){
-          className = `${className} mdc-button--stroked`;
-      }
-      if(this.dense){
-          className = `${className} mdc-button--dense`;
-      }
-      if(this.compact){
-          className = `${className} mdc-button--compact`;
-      }
-      return className;
-  }
+  @Element() btnEl : HTMLButtonElement;
+  classes: any;
+
   componentWillLoad(){
-      if(this.color && this.raised){
-        this.btnEl.style.setProperty('--mdc-theme-text-primary-on-primary',this.color);
-      }else if(this.color){
-        this.btnEl.style.setProperty('--mdc-theme-primary',this.color);
+      const buttonStyle = new ButtonStyle()
+      let changeStyle: object = {
+
       }
-      if(this.backgroundcolor){
-        this.btnEl.style.setProperty('--mdc-theme-primary',this.backgroundcolor);
-      }
+      buttonStyle.setup(changeStyle)
+      this.btnEl.disabled = this.disabled
+
+     /*  Object.getOwnPropertyNames(this).forEach((key) => {
+          console.log(typeof this[key])
+      }) */
+      this.btnEl.className = buttonStyle.getClassName(this.getClassNames())
+  }
+  getClassNames(): Array<string>{
+     let classNames:Array<string> = ['root']
+     if(this.disabled){
+         classNames.push('disabled')
+     }
+     if(this.raised){
+         classNames.push('raised')
+         if(this.color !== 'default'){
+            classNames.push(`raised${buttonColor[this.color]}`)
+         }
+     }
+     if(!this.raised && !this.stroked && !this.unelevated){
+         if(this.color !== 'default'){
+            classNames.push(`flat${buttonColor[this.color]}`)
+         }
+     }
+     if(this.dense){
+         classNames.push('dense')
+     }
+     if(this.fab){
+         classNames.push('fab')
+     }
+     if(this.mini){
+         classNames.push('mini')
+     }
+     return classNames;
   }
   componentDidLoad(){
       if(this.ripple){
-         this.buttonRipple =  MDCRipple.attachTo(this.mwcButton);
+       const rippleColor = (this.raised && (this.color === 'primary' || this.color === 'secondary')) ? rippleColors.white : rippleColors[this.color]
+      tmripple.attachToSelectors({
+            selectors: this.btnEl,
+            color: rippleColor,
+            eventListener: 'mousedown'
+        });
       }
-  }
-  componentDidUnload(){
-       if(this.ripple){
-          this.buttonRipple.destroy()
-       }
   }
   renderIcon(){
       if(this.icon){
@@ -72,21 +90,25 @@ export class MWCButton{
   renderButton(){
       if(this.href){
           return(
-             <a href={this.href} class={this.getButtonClassName()}>
+             <a href={this.href}>
                 <slot />
              </a>
           )
       }
       return (
-           <button disabled={this.disabled} ref={(mwcButton) => { this.mwcButton = mwcButton; }}
-           class={this.getButtonClassName()}>
+          <slot />
+      )
+      /* return (
+           <button disabled={this.disabled} ref={(mwcButton) => { this.mwcButton = mwcButton; }}>
             {this.renderIcon()}
             <slot />
           </button>
-      )
+      ) */
   }
 
   render() {
-    return this.renderButton()
+   return (
+          <slot />
+      )
   }
 }

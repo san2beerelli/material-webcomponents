@@ -4,7 +4,8 @@ export declare class MWCTheme {
     fonts: Array<string>;
     icons: Array<string>;
     fontsAndIcons: Array<string>;
-    getLinkNode(fontUrl: any): void;
+    constructor();
+    setLinkNode(fontUrl: any): void;
     componentWillLoad(): void;
     render(): JSX.Element;
 }

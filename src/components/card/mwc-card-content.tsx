@@ -1,15 +1,26 @@
 import { Component } from '@stencil/core';
+import CardContentStyle from './mwc-card-content-style'
 
 @Component({
   tag: 'mwc-card-content',
-  styleUrl: 'mwc-card-content.scss',
   shadow: false
 })
 export class MWCCardContent{
+  cardContentStyle:any;
+  componentWillLoad(){
+      this.cardContentStyle = new CardContentStyle()
+       let changeStyle: object = {
+      }
+     this.cardContentStyle.setup(changeStyle)
+  }
+  getClassNames():Array<string>{
+      let classNames:Array<string> = ['root']
+      return classNames
+  }
   render() {
     return (
-       <section class="mdc-card__supporting-text">
-        <slot/>
+       <section class={this.cardContentStyle.getClassName(this.getClassNames())}>
+         <slot/>
        </section>
     );
   }

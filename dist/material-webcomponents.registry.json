@@ -4,10 +4,10 @@
     [
       "mwc-button",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
-      1,
+      0,
       [
         [
           "backgroundcolor",
@@ -23,7 +23,7 @@
           "color",
           1,
           1,
-          2
+          1
         ],
         [
           "compact",
@@ -44,6 +44,12 @@
           3
         ],
         [
+          "fab",
+          1,
+          1,
+          3
+        ],
+        [
           "href",
           1,
           1,
@@ -54,6 +60,12 @@
           1,
           1,
           2
+        ],
+        [
+          "mini",
+          1,
+          1,
+          3
         ],
         [
           "raised",
@@ -86,10 +98,10 @@
     [
       "mwc-card",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
-      1,
+      0,
       [
         [
           "cardEl",
@@ -100,6 +112,18 @@
           1,
           1,
           2
+        ],
+        [
+          "radius",
+          1,
+          1,
+          4
+        ],
+        [
+          "raised",
+          1,
+          1,
+          3
         ],
         [
           "width",
@@ -114,8 +138,8 @@
     [
       "mwc-card-actions",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       0,
@@ -125,10 +149,10 @@
     [
       "mwc-card-content",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
-      1,
+      0,
       0,
       0,
       1
@@ -136,8 +160,8 @@
     [
       "mwc-card-header",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -160,10 +184,10 @@
     [
       "mwc-card-media",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
-      1,
+      0,
       [
         [
           "mediaheight",
@@ -182,8 +206,8 @@
     [
       "mwc-checkbox",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -250,8 +274,8 @@
     [
       "mwc-container",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       0,
       [
@@ -314,8 +338,8 @@
     [
       "mwc-content-for-toolbar",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       0,
       [
@@ -330,8 +354,8 @@
     [
       "mwc-dialog",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -366,8 +390,8 @@
     [
       "mwc-dialog-body",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       0,
@@ -377,8 +401,8 @@
     [
       "mwc-dialog-footer",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -393,8 +417,8 @@
     [
       "mwc-dialog-header",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       0,
@@ -404,8 +428,8 @@
     [
       "mwc-drawer",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -446,8 +470,8 @@
     [
       "mwc-fab",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -490,8 +514,8 @@
     [
       "mwc-grid-list",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -524,8 +548,8 @@
     [
       "mwc-grid-list-tile",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -546,8 +570,8 @@
     [
       "mwc-icon-toggle",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -608,10 +632,10 @@
     [
       "mwc-list",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
-      1,
+      0,
       [
         [
           "borderlist",
@@ -636,8 +660,8 @@
     [
       "mwc-list-item",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -664,8 +688,8 @@
     [
       "mwc-menu",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -694,8 +718,8 @@
     [
       "mwc-menu-item",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -718,10 +742,10 @@
     [
       "mwc-paper",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
-      1,
+      0,
       [
         [
           "elevation",
@@ -734,10 +758,6 @@
           1,
           1,
           2
-        ],
-        [
-          "paperEl",
-          7
         ],
         [
           "radius",
@@ -758,8 +778,8 @@
     [
       "mwc-progress",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -822,8 +842,8 @@
     [
       "mwc-radio",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -872,8 +892,8 @@
     [
       "mwc-select",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -924,8 +944,8 @@
     [
       "mwc-slider",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -988,8 +1008,8 @@
     [
       "mwc-snackbar",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -1060,8 +1080,8 @@
     [
       "mwc-switch",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -1104,8 +1124,8 @@
     [
       "mwc-tabbar",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -1136,8 +1156,8 @@
     [
       "mwc-textfield",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -1246,10 +1266,10 @@
     [
       "mwc-theme",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
-      1,
+      0,
       [
         [
           "fonts",
@@ -1280,8 +1300,8 @@
     [
       "mwc-toolbar",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -1302,8 +1322,8 @@
     [
       "mwc-toolbar-icon",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       1,
       [
@@ -1318,8 +1338,8 @@
     [
       "mwc-toolbar-section",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       0,
       [
@@ -1340,8 +1360,8 @@
     [
       "mwc-toolbar-title",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       0,
       [
@@ -1356,11 +1376,17 @@
     [
       "mwc-typography",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
-      1,
+      0,
       [
+        [
+          "align",
+          1,
+          1,
+          1
+        ],
         [
           "color",
           1,
@@ -1371,13 +1397,31 @@
           "display",
           1,
           1,
-          2
+          1
+        ],
+        [
+          "gutterbottom",
+          1,
+          1,
+          3
+        ],
+        [
+          "nowrap",
+          1,
+          1,
+          3
+        ],
+        [
+          "styles",
+          1,
+          1,
+          1
         ],
         [
           "type",
           1,
           1,
-          2
+          1
         ],
         [
           "typographyEl",
@@ -1390,8 +1434,8 @@
     [
       "mwc-viewport",
       [
-        "kyohtro1",
-        "8ditscva"
+        "mwc-button",
+        null
       ],
       0,
       [
@@ -1410,7 +1454,7 @@
       1
     ]
   ],
-  "core": "material-webcomponents.5k3jkl8n.js",
-  "coreSsr": "material-webcomponents.hnejyswz.js",
-  "corePolyfilled": "material-webcomponents.9fn5lfvf.js"
+  "core": "material-webcomponents.core.js",
+  "coreSsr": "material-webcomponents.core.ssr.js",
+  "corePolyfilled": "es5-build-disabled.js"
 }

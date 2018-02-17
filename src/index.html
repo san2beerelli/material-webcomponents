@@ -13,9 +13,44 @@
     width: 100%;
   }
   </style>
+  <script>
+  var process = {
+    env : {
+      NODE_ENV : "production"
+    }
+  }
+  </script>
 </head>
 <body>
-  <mwc-viewport>
+  <mwc-theme>
+    <mwc-typography>
+      Typography
+    </mwc-typography>
+    <mwc-typography type="title">
+      Typography
+    </mwc-typography>
+    <mwc-typography type="display4">
+      Typography
+    </mwc-typography>
+    <mwc-typography type="button">
+      Typography
+    </mwc-typography>
+     <mwc-button>Default</mwc-button>
+     <mwc-button raised=true color="secondary">Primary</mwc-button>
+     <mwc-button raised=true fab=true>S</mwc-button>
+     <mwc-paper>
+     <mwc-button raised=true color="primary" mini=true fab=true>s</mwc-button>
+     <mwc-button color="secondary">Secondary</mwc-button>
+     <mwc-button disabled=true >Disabled</mwc-button>
+     <mwc-button dense=true >Dense</mwc-button>
+     </mwc-paper>
+     <mwc-card width="400px" height="400px" radius=4>
+       <mwc-card-content>
+        <mwc-card-media src="https://placeimg.com/400/400/any"></mwc-card-media>
+       </mwc-card-content>
+     </mwc-card>
+  </mwc-theme>
+  <!-- <mwc-viewport>
     <mwc-theme>
     <mwc-toolbar type="flexible">
       <mwc-toolbar-section align="start">
@@ -81,6 +116,6 @@
 
     </mwc-content-for-toolbar>
     </mwc-theme>
-  </mwc-viewport>
+  </mwc-viewport> -->
 </body>
 </html>

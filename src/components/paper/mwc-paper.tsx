@@ -1,42 +1,40 @@
-import { Component, Prop, Element } from '@stencil/core';
+import { Component, Prop } from '@stencil/core';
+import PaperStyle from './mwc-paper-style'
 
 @Component({
   tag: 'mwc-paper',
-  styleUrl: 'mwc-paper.scss',
   shadow: false
 })
 export class MWCPaper{
 
-  @Element() paperEl : HTMLElement;
-  @Prop() width: string;
-  @Prop() height : string;
+  @Prop() width: string = 'auto';
+  @Prop() height : string = 'auto';
   @Prop() elevation : number = 2;
-  @Prop() radius : number = 2;
+  @Prop() radius : number = 4;
 
-  paperFigure:any;
+  paperStyle:any;
 
-  componentDidLoad(){
-      let paperStyles = '';
-       if(this.width){
-           paperStyles = `width:${this.width}; `;
-       }
-       if(this.height){
-           paperStyles = `${paperStyles}height:${this.height}; `;
-       }
-       if(this.radius){
-           paperStyles = `${paperStyles}border-radius:${this.radius}px; `;
-       }
-       if(paperStyles.length>0){
-           this.paperFigure.setAttribute('style',paperStyles)
-       }
+  componentWillLoad(){
+      this.paperStyle = new PaperStyle()
+       let changeStyle: object = {
+           rounded:{
+               borderRadius: this.radius,
+               width : this.width,
+               height: this.height,
+           }
+      }
+     this.paperStyle.setup(changeStyle)
+  }
+  getClassNames():Array<string>{
+      let classNames:Array<string> = ['root',`shadow${this.elevation}`, 'rounded']
+      return classNames
   }
 
   render() {
     return (
-        <figure ref={(paperFigure) => { this.paperFigure = paperFigure; }}
-        class={`mdc-elevation--z${this.elevation}`}>
-          <slot />
-        </figure>
+        <div class={this.paperStyle.getClassName(this.getClassNames())}>
+            <slot />
+        </div>
     )
   }
 }

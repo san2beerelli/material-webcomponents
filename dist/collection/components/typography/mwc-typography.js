@@ -1,22 +1,46 @@
-export class MWCTheme {
+import TypographyStyle from './mwc-typography.style';
+import { typographyType, displayType, alignType } from './mwc-typograpy-types';
+import deepmerge from 'deepmerge';
+export class MWCTypography {
     constructor() {
         this.type = "display1";
-        this.color = "";
-        this.display = "block"; //inherit
+        this.display = 'block';
+        this.align = 'left';
+        this.nowrap = false;
+        this.gutterbottom = false;
     }
     componentWillLoad() {
+        const typeStyle = new TypographyStyle();
+        let changeStyle = {
+            root: {
+                display: this.display
+            }
+        };
         if (this.color) {
-            this.typographyEl.style.setProperty(`color`, this.color);
+            changeStyle[this.type] = { 'color': this.color };
         }
-        /* if(this.display !== "block"){
-          this.typographyEl.style.setProperty(`--mwc-typography-dislpay`,this.display);
-        } */
-    }
-    getTypographyClassName() {
-        return `mdc-typography--${this.type} mwc-typography`;
+        if (this.styles) {
+            if (changeStyle[this.type]) {
+                changeStyle[this.type] = deepmerge.all([changeStyle[this.type], this.styles]);
+            }
+            else {
+                changeStyle[this.type] = this.styles;
+            }
+        }
+        typeStyle.setup(changeStyle);
+        let classNames = [];
+        classNames.push('root');
+        classNames.push(this.type);
+        classNames.push(`align${this.align}`);
+        if (this.nowrap) {
+            classNames.push('nowrap');
+        }
+        if (this.gutterbottom) {
+            classNames.push('gutterbottom');
+        }
+        this.typographyEl.className = typeStyle.getClassName(classNames);
     }
     render() {
-        return (h("div", { class: this.getTypographyClassName(), ref: (mwcTypograpyDiv) => { this.mwcTypograpyDiv = mwcTypograpyDiv; } },
-            h("slot", null)));
+        return (h("slot", null));
     }
 }

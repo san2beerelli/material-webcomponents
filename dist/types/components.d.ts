@@ -4,6 +4,14 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
+import {
+  colorType,
+} from './components/button/mwc-button-types';
+import {
+  alignType,
+  displayType,
+  typographyType,
+} from './components/typography/mwc-typograpy-types';
 
 import {
   MWCButton as MwcButton
@@ -30,12 +38,14 @@ declare global {
   namespace JSXElements {
     export interface MwcButtonAttributes extends HTMLAttributes {
       backgroundcolor?: string;
-      color?: string;
+      color?: colorType;
       compact?: boolean;
       dense?: boolean;
       disabled?: boolean;
+      fab?: boolean;
       href?: string;
       icon?: string;
+      mini?: boolean;
       raised?: boolean;
       ripple?: boolean;
       stroked?: boolean;
@@ -192,6 +202,8 @@ declare global {
   namespace JSXElements {
     export interface MwcCardAttributes extends HTMLAttributes {
       height?: string;
+      radius?: number;
+      raised?: boolean;
       width?: string;
     }
   }
@@ -1189,7 +1201,7 @@ declare global {
 
 
 import {
-  MWCTheme as MwcTypography
+  MWCTypography as MwcTypography
 } from './components/typography/mwc-typography';
 
 declare global {
@@ -1212,9 +1224,13 @@ declare global {
   }
   namespace JSXElements {
     export interface MwcTypographyAttributes extends HTMLAttributes {
+      align?: alignType;
       color?: string;
-      display?: string;
-      type?: string;
+      display?: displayType;
+      gutterbottom?: boolean;
+      nowrap?: boolean;
+      styles?: any;
+      type?: typographyType;
     }
   }
 }

@@ -1,3 +1,2 @@
-export declare class MWCUtil {
-    saveToLocalStorage(): void;
-}
+export declare function setTheme(data: any): void;
+export declare function getTheme(): Object;

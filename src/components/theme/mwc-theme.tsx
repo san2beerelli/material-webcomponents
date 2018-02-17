@@ -1,7 +1,9 @@
 import { Component, Prop, Element  } from '@stencil/core';
+import theme from '../util/theme'
+import {setTheme, getTheme} from '../util/mwc-util'
 @Component({
   tag: 'mwc-theme',
-  styleUrl: 'mwc-theme.scss',
+  //styleUrl: 'mwc-theme.scss',
   shadow: false
 })
 export class MWCTheme{
@@ -21,8 +23,11 @@ export class MWCTheme{
       "background": '#BDBDBD'
   };
    */
+  constructor(){
+    setTheme(theme)
+  }
 
-  getLinkNode(fontUrl){
+  setLinkNode(fontUrl){
     var linkNode = document.createElement('link');
        linkNode.type = "text/css";
        linkNode.rel = "stylesheet";
@@ -33,13 +38,14 @@ export class MWCTheme{
   componentWillLoad(){
       const urls = [...this.fonts,...this.fontsAndIcons, ...this.icons]
        urls.forEach((font)=>{
-        this.getLinkNode(font);
+        this.setLinkNode(font);
       })
-       if(this.theme){
-        Object.keys(this.theme).forEach((key)=>{
-            this.themeEl.style.setProperty(`--mdc-theme-${key}`,this.theme[key]);
-        })
-       }
+      //  if(this.theme){
+      //   Object.keys(this.theme).forEach((key)=>{
+      //       this.themeEl.style.setProperty(`--mdc-theme-${key}`,this.theme[key]);
+      //   })
+      //  }
+    //   console.log(getTheme())
   }
 
   render() {

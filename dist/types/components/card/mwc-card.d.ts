@@ -2,8 +2,9 @@ export declare class MWCCard {
     cardEl: HTMLElement;
     width: string;
     height: string;
-    mwcCard: any;
+    raised: boolean;
+    radius: number;
     componentDidLoad(): void;
-    renderCardSlots(): void;
+    getElevation(): number;
     render(): JSX.Element;
 }

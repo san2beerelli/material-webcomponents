@@ -1,0 +1,41 @@
+{
+  "extends": ["standard"],
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "globals": {
+    "fetch": true
+  },
+  "rules":{
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "always-multiline"
+    }],
+    "jsx-quotes": ["error", "prefer-double"],
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": false }],
+    "prefer-const": ["error"],
+    "no-var": ["error"],
+    "max-len": ["error", 100, 2, {
+      "ignoreUrls": true,
+      "ignoreComments": false,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true
+    }],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "block-like", "next": "block-like" }
+    ],
+    "quote-props": ["error", "as-needed", { "keywords": false, "unnecessary": true, "numbers": false }],
+    "func-style": ["error", "expression"],
+    "import/order": ["error", {
+      "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+      "newlines-between": "never"
+    }],
+    "strict": 0
+  }
+}
